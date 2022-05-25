@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 // Controllers - technically just more middleware
-app.use(booksController);
+app.use('/books', booksController);
 
 // Listener
 const PORT = process.env.PORT;
